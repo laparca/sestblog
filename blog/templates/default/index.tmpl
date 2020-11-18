@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <!-- Katex stuff -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+        <!-- The loading of KaTeX is deferred to speed up page rendering -->
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+         <!-- To automatically render math in text elements, include the auto-render extension: -->
+         <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+         <!-- syntax highlighting -->
+         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css">
+         <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+         <!-- and it's easy to individually load additional languages -->
+         <script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/go.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1><%!site_title()%></h1>
+        </header>
+            
+        <% for (auto blog_entry : blog_entries()) { %>
+            <div class="blog_entry">
+                <h2><%!blog_entry.title()%></h2>
+                <p><%!blog_entry.abstract()%></p>
+                <a href="<%!blog_entry.link()%>">Read more...</a>
+            </div>
+        <% } %>
+
+        <footer>
+            
+        </footer>
+        <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+</html>

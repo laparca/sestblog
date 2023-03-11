@@ -2,17 +2,9 @@ cmake_minimum_required(VERSION 3.10)
 project(sestblog VERSION 0.1)
 
 include(cmake/CPM.cmake)
-CPMAddPackage(
-    NAME lzcmarkdownpp
-    GIT_REPOSITORY https://github.com/laparca/lzcmarkdownpp.git
-    GIT_TAG master
-    )
+CPMAddPackage("gh:laparca/lzcmarkdownpp#master")
 
-CPMAddPackage(
-    NAME cpptemplater
-    GIT_REPOSITORY https://github.com/laparca/cpptemplater.git 
-    GIT_TAG master
-    )
+CPMAddPackage("gh:laparca/cpptemplater#master")
 
 CPMAddPackage(
     NAME yaml-cpp

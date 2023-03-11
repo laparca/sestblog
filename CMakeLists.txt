@@ -4,13 +4,13 @@ project(sestblog VERSION 0.1)
 include(cmake/CPM.cmake)
 CPMAddPackage(
     NAME lzcmarkdownpp
-    GIT_REPOSITORY https://git.ctrlz.es/lazycoders/lzcmarkdownpp.git
+    GIT_REPOSITORY https://github.com/laparca/lzcmarkdownpp.git
     GIT_TAG master
     )
 
 CPMAddPackage(
     NAME cpptemplater
-    GIT_REPOSITORY https://git.ctrlz.es/lazycoders/cpptemplater.git 
+    GIT_REPOSITORY https://github.com/laparca/cpptemplater.git 
     GIT_TAG master
     )
 
